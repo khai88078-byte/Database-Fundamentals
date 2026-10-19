@@ -1,15 +1,22 @@
-# Database-Fundamentals
+# AI Server System Database
 
-# Database Fundamentals Practice
+This repository contains the SQL script for a relational database designed to manage an AI Lab Server infrastructure. It was built as part of my Database Fundamentals coursework.
 
-This repository contains my SQL practice files for my Database Fundamentals course.
+## 🗄️ Database Schema
+The database (`SISTEM_PELAYAN_AI`) consists of three related tables:
+1. **SERVER**: Stores hardware specs and OS details for physical/virtual servers.
+2. **AGENT**: Stores AI models deployed on specific servers.
+3. **PERFORMANCE_LOG**: Tracks CPU usage and logging dates for each agent.
 
-## Projects:
-1. **AI Lab System (Sistem Pelayan AI)**
-   - Built a relational database with 3 tables (Server, Agent, PerformanceLog).
-   - Used Primary Keys and Foreign Keys.
-   - Wrote queries using SELECT, WHERE, UPDATE, DELETE, AND, and BETWEEN.
+## 🔗 Entity Relationships
+- One `SERVER` can host multiple `AGENT`s (1-to-Many).
+- Both `SERVER` and `AGENT` are referenced in the `PERFORMANCE_LOG` to track which agent on which server is using CPU resources.
 
-## Technologies Used:
-- MySQL
-- MySQL Workbench
+## 🛠️ Technologies Used
+- **MySQL / MySQL Workbench**
+- **SQL (DDL & DML)**
+
+## 🚀 How to Run
+1. Open MySQL Workbench.
+2. Open the `SYSTEM SERVER AI (1.0).sql` file.
+3. Execute the entire script to create the database, tables, and insert the sample data.
